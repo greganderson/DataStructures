@@ -19,15 +19,35 @@ public class ArrayList<E> {
 		lastIndex++;
 	}
 
-	public boolean remove(E item) {
+	public void remove(E item) {
+		int i = 0;
+		for (; i < array.length; i++) {
+			if (array[i] == item)
+				break;
+		}
+		for (; i < array.length-1; i++) {
+			array[i] = array[i+1];
+		}
+		lastIndex--;
+	}
+
+	public E get(int index) {
 		// TODO: Implement
 	}
 
 	public boolean empty() {
-		// TODO: Implement
+		return lastIndex == 0;
 	}
 
 	private void expandArray() {
-		// TODO: Implement
+		E[] tempArray = new E[array.length];
+		for (int i = 0; i < array.length; i++) {
+			tempArray[i] = array[i];
+		}
+
+		array = new E[array.length * 2];
+		for (int i = 0; i < tempArray.length; i++) {
+			array[i] = tempArray[i];
+		}
 	}
 }
