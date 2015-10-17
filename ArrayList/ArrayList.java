@@ -32,7 +32,9 @@ public class ArrayList<E> {
 	}
 
 	public E get(int index) {
-		// TODO: Implement
+		if (index >= array.length)
+			throw new ArrayIndexOutOfBoundsException();
+		return array[index];
 	}
 
 	public boolean empty() {
