@@ -9,17 +9,30 @@ public class LinkedList<E> {
 	}
 
 	public void add(E item) {
+		if (head == null) {
+			head = new Node(item);
+			size++;
+			return;
+		}
+
 		Node tempNode = head;
 
 		while (tempNode.getNextNode() != null)
 			tempNode = tempNode.getNextNode();
 
 		tempNode.setNextNode(new Node(item));
+		size++;
 	}
 
 	public void add(E item, int index) {
 		if (index >= size)
 			throw new ArrayIndexOutOfBoundsException();
+
+		if (head == null) {
+			head = new Node(item);
+			size++;
+			return;
+		}
 
 		Node tempNode = head;
 		for (int i = 0; i <= index; i++) {
@@ -29,6 +42,7 @@ public class LinkedList<E> {
 		Node newNode = new Node(item);
 		newNode.setNextNode(tempNode.getNextNode());
 		tempNode.setNextNode(newNode);
+		size++;
 	}
 
 	public void remove(E item) {
