@@ -19,6 +19,10 @@ public class ArrayList<E> {
 		lastIndex++;
 	}
 
+	public void add(E item, int index) {
+		// TODO: Implement
+	}
+
 	public void remove(E item) {
 		int i = 0;
 		for (; i < array.length; i++) {
