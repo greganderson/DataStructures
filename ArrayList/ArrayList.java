@@ -41,6 +41,10 @@ public class ArrayList<E> {
 		return array[index];
 	}
 
+	public boolean contains(E item) {
+		// TODO: Implement
+	}
+
 	public boolean empty() {
 		return lastIndex == 0;
 	}
