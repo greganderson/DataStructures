@@ -9,11 +9,26 @@ public class LinkedList<E> {
 	}
 
 	public void add(E item) {
-		// TODO: Implement
+		Node tempNode = head;
+
+		while (tempNode.getNextNode() != null)
+			tempNode = tempNode.getNextNode();
+
+		tempNode.setNextNode(new Node(item));
 	}
 
 	public void add(E item, int index) {
-		// TODO: Implement
+		if (index >= size)
+			throw new ArrayIndexOutOfBoundsException();
+
+		Node tempNode = head;
+		for (int i = 0; i <= index; i++) {
+			tempNode = tempNode.getNextNode();
+		}
+
+		Node newNode = new Node(item);
+		newNode.setNextNode(tempNode.getNextNode());
+		tempNode.setNextNode(newNode);
 	}
 
 	public void remove(E item) {
@@ -44,9 +59,9 @@ public class LinkedList<E> {
 		private E data;
 		private Node nextNode;
 
-		public Node(E data, Node nextNode) {
+		public Node(E data) {
 			this.data = data;
-			this.nextNode = nextNode;
+			this.nextNode = null;
 		}
 
 		public E getData() {
