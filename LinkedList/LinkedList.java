@@ -1,7 +1,11 @@
 public class LinkedList<E> {
+
+	private Node head;
+	private int size;
 	
 	public LinkedList() {
-		// TODO: Implement
+		head = null;
+		size = 0;
 	}
 
 	public void add(E item) {
@@ -16,8 +20,24 @@ public class LinkedList<E> {
 		// TODO: Implement
 	}
 
+	public E get(int index) {
+		if (index >= size)
+			throw new ArrayIndexOutOfBoundsException();
+
+		Node tempNode = head;
+		for (int i = 0; i <= index; i++) {
+			tempNode = tempNode.getNextNode();
+		}
+
+		return tempNode.getData();
+	}
+
 	public boolean empty() {
 		// TODO: Implement
+	}
+
+	public int size() {
+		return size;
 	}
 
 	class Node<E> {
