@@ -46,7 +46,14 @@ public class LinkedList<E> {
 	}
 
 	public void remove(E item) {
-		// TODO: Implement
+		if (head == null || !contains(item))
+			return;
+
+		Node tempNode = head;
+		while (tempNode.getNextNode().getData() != item)
+			tempNode = tempNode.getNextNode();
+		tempNode.setNextNode(tempNode.getNextNode().getNextNode());
+		size--;
 	}
 
 	public E get(int index) {
@@ -61,8 +68,12 @@ public class LinkedList<E> {
 		return tempNode.getData();
 	}
 
-	public boolean empty() {
+	public boolean contains(E item) {
 		// TODO: Implement
+	}
+
+	public boolean empty() {
+		return size == 0;
 	}
 
 	public int size() {
