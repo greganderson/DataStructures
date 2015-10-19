@@ -69,7 +69,16 @@ public class LinkedList<E> {
 	}
 
 	public boolean contains(E item) {
-		// TODO: Implement
+		if (head == null)
+			return false;
+
+		Node tempNode = head;
+		while (tempNode != null) {
+			if (tempNode.getData() == item)
+				return true;
+			tempNode = tempNode.getNextNode();
+		}
+		return false;
 	}
 
 	public boolean empty() {
