@@ -7,7 +7,7 @@ public class Graph<E> {
 	/**
 	 * Add edge v-w
 	 */
-	public void addEdge(String v, String w) {
+	public void addEdge(E v, E w) {
 		// TODO: Implement
 	}
 
@@ -28,35 +28,35 @@ public class Graph<E> {
 	/**
 	 * Vertices in the graph
 	 */
-	public Iterable<String> vertices() {
+	public Iterable<E> vertices() {
 		// TODO: Implement
 	}
 
 	/**
 	 * Neighbors of v
 	 */
-	public Iterable<String> adjacentTo(String v) {
+	public Iterable<E> adjacentTo(E v) {
 		// TODO: Implement
 	}
 
 	/**
 	 * Number of neighbors of v
 	 */
-	public int degree(String v) {
+	public int degree(E v) {
 		// TODO: Implement
 	}
 
 	/**
 	 * Is v a vertex in the graph?
 	 */
-	public boolean hasVertex(String v) {
+	public boolean hasVertex(E v) {
 		// TODO: Implement
 	}
 
 	/**
 	 * is v-w an edge in the graph?
 	 */
-	public boolean hasEdge(String v, String w) {
+	public boolean hasEdge(E v, E w) {
 		// TODO: Implement
 	}
 }
