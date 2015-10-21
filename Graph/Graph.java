@@ -1,39 +1,62 @@
 public class Graph<E> {
-	Set<Node> graph;
 
 	public Graph() {
-		graph = new HashSet<>();
+		// TODO: Implement
 	}
 
+	/**
+	 * Add edge v-w
+	 */
+	public void addEdge(String v, String w) {
+		// TODO: Implement
+	}
 
-	class Node<E> {
+	/**
+	 * Number of vertices
+	 */
+	public int V() {
+		// TODO: Implement
+	}
 
-		private data;
-		private Set<Node> edges;
+	/**
+	 * Number of edges
+	 */
+	public int E() {
+		// TODO: Implement
+	}
 
-		public Node(E data) {
-			this.data = data;
-			edges = new HashSet<>();
-		}
+	/**
+	 * Vertices in the graph
+	 */
+	public Iterable<String> vertices() {
+		// TODO: Implement
+	}
 
-		public E getData() {
-			return data;
-		}
+	/**
+	 * Neighbors of v
+	 */
+	public Iterable<String> adjacentTo(String v) {
+		// TODO: Implement
+	}
 
-		public void setData(E data) {
-			this.data = data;
-		}
+	/**
+	 * Number of neighbors of v
+	 */
+	public int degree(String v) {
+		// TODO: Implement
+	}
 
-		public void addEdge(Node node) {
-			edges.add(node);
-		}
+	/**
+	 * Is v a vertex in the graph?
+	 */
+	public boolean hasVertex(String v) {
+		// TODO: Implement
+	}
 
-		public void removeEdge(Node node) {
-			edges.remove(node);
-		}
-
-		public Set<Node> getEdges() {
-			return edges;
-		}
+	/**
+	 * is v-w an edge in the graph?
+	 */
+	public boolean hasEdge(String v, String w) {
+		// TODO: Implement
 	}
 }
